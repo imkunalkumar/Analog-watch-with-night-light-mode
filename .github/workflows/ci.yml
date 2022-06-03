@@ -21,6 +21,6 @@ jobs:
         REMOTE_HOST: ${{ secrets.R_HOST }}
         REMOTE_USER: ${{ secrets.R_USER }}
         REMOTE_PORT: ${{ secrets.R_PORT }}
-        TARGET: /var/www/
+        TARGET: /var/www/Analog-watch-with-night-light-mode
      
       
