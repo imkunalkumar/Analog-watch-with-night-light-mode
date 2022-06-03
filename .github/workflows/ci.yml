@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: deploy kr na
+    name: deploy pipeline
     runs-on: ubuntu-latest
     steps:
     - name: Repo checkout
