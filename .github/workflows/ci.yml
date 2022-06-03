@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-  deploy:
+  build:
     name: deploy kr na
     runs-on: ubuntu-latest
     steps:
