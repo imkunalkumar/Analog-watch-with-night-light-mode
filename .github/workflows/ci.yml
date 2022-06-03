@@ -11,14 +11,10 @@ on:
 
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    
+    - uses: actions/checkout@v3 
     - name: ssh deploy
-    
     uses: easingthemes/ssh-deploy@v2.2.11
     with:
       # Private Key
@@ -30,7 +26,6 @@ jobs:
       # Remote port
       REMOTE_PORT: ${{ secrets.R_PORT }}
       # Source directory
-     
       TARGET:  /var/www/
      
       
