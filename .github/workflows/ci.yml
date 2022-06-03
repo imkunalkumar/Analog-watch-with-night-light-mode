@@ -6,8 +6,6 @@ name: aws ec2 deploy
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -15,19 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Repo checkout
-    uses: actions/checkout@v3 
+      uses: actions/checkout@v3 
     - name: ssh deploy
       uses: easingthemes/ssh-deploy@v2.2.11
       with:
-        # Private Key
         SSH_PRIVATE_KEY: ${{ secrets.R_PKI }}
-        # Remote host
         REMOTE_HOST: ${{ secrets.R_HOST }}
-        # Remote user
         REMOTE_USER: ${{ secrets.R_USER }}
-        # Remote port
         REMOTE_PORT: ${{ secrets.R_PORT }}
-        # Source directory
-        TARGET:  /var/www/
+        TARGET: /var/www/
      
       
